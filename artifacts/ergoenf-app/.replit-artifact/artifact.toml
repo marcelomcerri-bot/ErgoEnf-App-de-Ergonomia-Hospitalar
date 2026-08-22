@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "ErgoEnf — Cuidar de quem cuida"
+description = "App interativo de educação postural e ergonomia hospitalar baseado no guia ErgoEnf, com trilhas práticas, procedimentos assistenciais, checklists e acompanhamento de progresso para profissionais de enfermagem."
+version = "1.0.0"
+id = "artifacts/ergoenf-app"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20814
+
+[services.development]
+run = "pnpm --filter @workspace/ergoenf-app run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ergoenf-app", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/ergoenf-app/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20814"
+BASE_PATH = "/"

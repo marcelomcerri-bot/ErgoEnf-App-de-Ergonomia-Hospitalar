@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--app-font-serif);
+  --font-mono: var(--app-font-mono);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --background: 39 44% 95%;
+  --foreground: 184 32% 19%;
+  --border: 38 22% 84%;
+  --input: 38 22% 84%;
+  --ring: 168 47% 39%;
+  --card: 42 40% 98%;
+  --card-foreground: 184 32% 19%;
+  --card-border: 38 24% 86%;
+  --primary: 168 47% 32%;
+  --primary-foreground: 42 40% 98%;
+  --secondary: 33 86% 68%;
+  --secondary-foreground: 184 32% 19%;
+  --muted: 38 30% 91%;
+  --muted-foreground: 184 13% 44%;
+  --accent: 14 69% 61%;
+  --accent-foreground: 42 40% 98%;
+  --destructive: 4 64% 47%;
+  --destructive-foreground: 42 40% 98%;
+  --app-font-sans: 'DM Sans', sans-serif;
+  --app-font-serif: 'Fraunces', serif;
+  --app-font-mono: 'DM Sans', sans-serif;
+  --radius: 1rem;
+  --shadow-sm: 0 5px 16px rgba(37, 66, 62, 0.06);
+  --shadow-md: 0 12px 30px rgba(37, 66, 62, 0.09);
+}
+
+.dark {
+  --background: 184 31% 13%;
+  --foreground: 39 44% 95%;
+  --border: 184 20% 25%;
+  --input: 184 20% 25%;
+  --ring: 168 47% 55%;
+  --card: 184 28% 17%;
+  --card-foreground: 39 44% 95%;
+  --card-border: 184 20% 25%;
+  --primary: 168 47% 55%;
+  --primary-foreground: 184 31% 13%;
+  --secondary: 33 86% 62%;
+  --secondary-foreground: 184 31% 13%;
+  --muted: 184 22% 21%;
+  --muted-foreground: 39 15% 70%;
+  --accent: 14 69% 65%;
+  --accent-foreground: 184 31% 13%;
+  --destructive: 4 64% 57%;
+  --destructive-foreground: 184 31% 13%;
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body { @apply font-sans antialiased bg-background text-foreground; }
+  button, a, input { -webkit-tap-highlight-color: transparent; }
+  ::selection { background: hsl(var(--secondary)); color: hsl(var(--foreground)); }
+}
+
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes drift { from { transform: translateY(0); } to { transform: translateY(-6px); } }
+.animate-rise { animation: rise .55s cubic-bezier(.22,.7,.25,1) both; }
+.animate-drift { animation: drift 3s ease-in-out infinite alternate; }
+.delay-1 { animation-delay: .08s; }
+.delay-2 { animation-delay: .16s; }
+.delay-3 { animation-delay: .24s; }
+.delay-4 { animation-delay: .32s; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+.dot-grid {
+  background-image: radial-gradient(hsl(var(--primary) / .15) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+.safe-area-bottom { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
