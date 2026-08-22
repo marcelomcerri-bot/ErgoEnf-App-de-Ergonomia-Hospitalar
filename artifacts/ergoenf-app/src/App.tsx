@@ -18,6 +18,10 @@ type Procedure = {
   title: string;
   eyebrow: string;
   description: string;
+  context: string;
+  risks: string;
+  image: string;
+  imageAlt: string;
   time: string;
   icon: LucideIcon;
   steps: string[];
@@ -38,6 +42,10 @@ const procedures: Procedure[] = [
     title: 'Prepare antes de começar',
     eyebrow: 'Base de todo cuidado',
     description: 'Um minuto de preparação pode mudar a qualidade do movimento durante o procedimento.',
+    context: 'Antes de qualquer técnica específica, existe um conjunto de hábitos preventivos que se aplica a toda situação de trabalho. A organização do ambiente, a regulagem da altura do leito e a antecipação dos materiais diminuem a improvisação e tornam o movimento mais previsível.',
+    risks: 'Alcances longos, flexões lombares repetidas, materiais fora do campo de trabalho e movimentos imprevistos durante a assistência.',
+    image: '/ebook-images/ebook-04.jpg',
+    imageAlt: 'Profissional preparando o leito antes de um procedimento',
     time: '2 min',
     icon: ClipboardCheck,
     tags: ['altura', 'distância', 'ajuda'],
@@ -48,6 +56,10 @@ const procedures: Procedure[] = [
     title: 'Banho no leito',
     eyebrow: 'Higiene e conforto',
     description: 'Organize materiais e posições para cuidar sem permanecer inclinado por tempo desnecessário.',
+    context: 'O banho no leito exige permanência próxima ao paciente, repetição e mudanças de lado. A postura protegida combina leito ajustado, materiais ao alcance e alternância de apoio para que o cuidado não seja sustentado pela lombar.',
+    risks: 'Inclinação anterior prolongada, postura estática, repetição de flexões e torção do tronco ao alcançar o lado oposto do leito.',
+    image: '/ebook-images/ebook-05.jpg',
+    imageAlt: 'Postura correta e incorreta durante o banho no leito',
     time: '4 min',
     icon: Droplets,
     tags: ['leito', 'alcance', 'pausas'],
@@ -58,6 +70,10 @@ const procedures: Procedure[] = [
     title: 'Troca de fralda e higiene íntima',
     eyebrow: 'Cuidado próximo',
     description: 'Planeje o alcance e preserve sua base de apoio durante um cuidado que exige atenção e delicadeza.',
+    context: 'A higiene íntima combina proximidade, delicadeza e mobilização do paciente. Elevar o leito, preparar todos os materiais e usar a base das pernas para se aproximar são escolhas simples que evitam sobrecarga acumulativa.',
+    risks: 'Flexão lombar sustentada, rotação brusca para reposicionar o paciente e esforço concentrado na musculatura paravertebral.',
+    image: '/ebook-images/ebook-07.png',
+    imageAlt: 'Posicionamento ergonômico para troca de fralda',
     time: '3 min',
     icon: ShieldCheck,
     tags: ['altura', 'pernas', 'apoio'],
@@ -68,6 +84,10 @@ const procedures: Procedure[] = [
     title: 'Mobilização e mudança de decúbito',
     eyebrow: 'Movimento compartilhado',
     description: 'Reduza a distância e coordene o movimento: segurança para quem cuida e para quem é cuidado.',
+    context: 'Mobilizar não é puxar. É aproximar, explicar, combinar um sinal e dividir o esforço. Lençóis móveis e dispositivos auxiliares, quando disponíveis, devem fazer parte do planejamento para reduzir a carga manual.',
+    risks: 'Tração com a coluna, ausência de sincronismo, torção do tronco, distância excessiva e tentativa de realizar sozinho um movimento que exige equipe.',
+    image: '/ebook-images/ebook-09.jpg',
+    imageAlt: 'Mobilização de paciente com alinhamento corporal',
     time: '5 min',
     icon: Move,
     tags: ['coordenação', 'ajuda', 'distância'],
@@ -78,6 +98,10 @@ const procedures: Procedure[] = [
     title: 'Transferência do paciente',
     eyebrow: 'Da cama à cadeira',
     description: 'Antes de mover, olhe para o caminho. O melhor movimento é o que foi preparado.',
+    context: 'A transferência começa antes do primeiro movimento: confira o trajeto, os freios, a superfície e a capacidade de participação do paciente. Aproximar cama e cadeira reduz a distância e permite que a equipe trabalhe com mais controle.',
+    risks: 'Queda, perda de equilíbrio, distância entre superfícies, equipamento sem freio e esforço de uma única pessoa acima do limite biomecânico.',
+    image: '/ebook-images/ebook-10.jpg',
+    imageAlt: 'Transferência de paciente com apoio da equipe',
     time: '4 min',
     icon: Users,
     tags: ['caminho', 'freios', 'equipe'],
@@ -88,6 +112,10 @@ const procedures: Procedure[] = [
     title: 'Punção e administração de medicamentos',
     eyebrow: 'Precisão sem sobrecarga',
     description: 'Ajuste sua posição antes de buscar precisão: mãos estáveis começam em um corpo apoiado.',
+    context: 'Procedimentos de precisão também podem gerar carga quando repetidos muitas vezes. Ajustar a bancada, apoiar o membro, manter pescoço neutro e alternar entre sentado e em pé ajudam a preservar ombros, punhos e visão.',
+    risks: 'Pescoço inclinado, punho sem apoio, alcance lateral, postura fixa e organização tardia de materiais e medicações.',
+    image: '/ebook-images/ebook-12.jpg',
+    imageAlt: 'Postura ergonômica durante punção e preparo de medicamentos',
     time: '3 min',
     icon: Pill,
     tags: ['apoio', 'punho', 'visão'],
@@ -98,6 +126,10 @@ const procedures: Procedure[] = [
     title: 'Drenos, bolsas coletoras e curativos',
     eyebrow: 'Detalhes que pedem atenção',
     description: 'Aproxime o campo de trabalho e evite deixar tubos ou bolsas criarem uma distância extra.',
+    context: 'Drenos, bolsas e curativos pedem atenção aos detalhes sem deixar que o profissional alcance o campo de trabalho de forma desfavorável. Posicione o corpo de frente e dobre os joelhos quando o acesso estiver baixo.',
+    risks: 'Acesso baixo com coluna curvada, tubos criando obstáculos, apoio insuficiente dos pés e inclinação do pescoço por tempo prolongado.',
+    image: '/ebook-images/ebook-14.jpg',
+    imageAlt: 'Acesso ergonômico a drenos e dispositivos baixos',
     time: '3 min',
     icon: BriefcaseMedical,
     tags: ['alcance', 'organização', 'postura'],
@@ -108,6 +140,10 @@ const procedures: Procedure[] = [
     title: 'Transporte e registros de enfermagem',
     eyebrow: 'Fechar o ciclo',
     description: 'O cuidado continua no deslocamento e no registro: reserve espaço para recuperar o corpo.',
+    context: 'Carregar materiais, conduzir equipamentos e registrar informações também acumulam carga ao longo do turno. No posto, monitor na altura dos olhos, antebraços apoiados e alternância entre sentar e ficar em pé protegem o corpo.',
+    risks: 'Carregamento incorreto, fadiga acumulada, desequilíbrio postural, cabeça inclinada diante da tela e longos períodos sem pausa.',
+    image: '/ebook-images/ebook-15.png',
+    imageAlt: 'Estação de trabalho ergonômica para registros de enfermagem',
     time: '2 min',
     icon: FileText,
     tags: ['deslocamento', 'registro', 'recuperação'],
@@ -230,6 +266,17 @@ function Overview({ completed, favorites, setFavorites }: { completed: string[];
         <div className="space-y-4"><div className="rounded-[24px] border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-6 shadow-[var(--shadow-sm)]"><div className="flex items-start justify-between"><div><div className="text-xs font-bold uppercase tracking-[.16em] text-[hsl(var(--accent))]">Agora, com você</div><h3 className="mt-2 font-serif text-2xl font-bold">Como está seu corpo?</h3></div><HeartPulse className="text-[hsl(var(--accent))]" size={25} /></div><p className="mt-3 text-sm leading-6 text-[hsl(var(--muted-foreground))]">Registre um sinal rápido. Perceber cedo ajuda a escolher melhor o próximo movimento.</p><Link href="/body" data-testid="link-body-checkin" className="mt-5 flex items-center justify-center gap-2 rounded-xl bg-[hsl(var(--muted))] px-4 py-3 text-sm font-bold text-[hsl(var(--foreground))] hover:bg-[hsl(var(--secondary)/.6)]">Fazer check-in <ArrowRight size={16} /></Link></div><div className="dot-grid rounded-[24px] border border-[hsl(var(--border))] p-6"><div className="flex items-center gap-2 text-[hsl(var(--primary))]"><Landmark size={18} /><span className="text-xs font-bold uppercase tracking-[.14em]">Por que isso importa</span></div><p className="mt-4 font-serif text-xl font-semibold leading-snug">Em hospitais universitários brasileiros, cuidar também é lidar com ritmo, carga e improviso.</p><Link href="/about" data-testid="link-about-project" className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-[hsl(var(--primary))]">Conhecer o projeto <ChevronRight size={15} /></Link></div></div>
       </section>
 
+      <section className="mt-14 grid gap-7 overflow-hidden rounded-[28px] border border-[hsl(var(--border))] bg-[hsl(var(--card))] lg:grid-cols-[1.05fr_.95fr]">
+        <img src="/ebook-images/ebook-03.jpg" alt="Equipe de enfermagem em atividade assistencial no hospital" className="h-full min-h-[260px] w-full object-cover" />
+        <div className="p-7 sm:p-9">
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[.16em] text-[hsl(var(--primary))]"><Landmark size={15} /> contexto do guia</div>
+          <h2 className="mt-4 font-serif text-3xl font-bold leading-tight">A rotina hospitalar também deixa marcas no corpo.</h2>
+          <p className="mt-4 text-sm leading-7 text-[hsl(var(--muted-foreground))]">A equipe de enfermagem é uma das categorias mais expostas a lesões musculoesqueléticas relacionadas ao trabalho. Mobilizações frequentes, posturas prolongadas e repetição de gestos somam carga ao longo da jornada.</p>
+          <p className="mt-3 text-sm leading-7 text-[hsl(var(--muted-foreground))]">O cenário não é só individual: dimensionamento de pessoal, disponibilidade de equipamentos e organização institucional também fazem parte da ergonomia. O app começa pelo que pode ser observado e ajustado no próximo cuidado.</p>
+          <Link href="/about" className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[hsl(var(--primary))]">Ler o contexto completo <ArrowRight size={15} /></Link>
+        </div>
+      </section>
+
       <section className="mt-14 overflow-hidden rounded-[28px] bg-[hsl(var(--secondary)/.42)] p-6 sm:p-9"><div className="grid items-center gap-7 lg:grid-cols-[1fr_auto]"><div><div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[.16em] text-[hsl(var(--primary))]"><Award size={16} /> as seis regras de ouro</div><h2 className="mt-3 max-w-xl font-serif text-3xl font-bold leading-tight tracking-[-.03em]">Pequenos ajustes. Menos sobrecarga. Mais presença.</h2><p className="mt-3 max-w-xl text-sm leading-6 text-[hsl(var(--foreground)/.72)]">Um lembrete visual para consultar antes, durante ou depois de qualquer procedimento.</p></div><Link href="/rules" data-testid="link-golden-rules" className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[hsl(var(--primary))] px-5 py-3.5 text-sm font-bold text-[hsl(var(--primary-foreground))]">Ver as regras <ArrowRight size={17} /></Link></div></section>
 
       <AboutProject />
@@ -243,12 +290,13 @@ function ProcedureRow({ procedure, index, done, favorite, onFavorite }: { proced
 }
 
 function Learn({ completed, setCompleted, favorites, setFavorites }: { completed: string[]; setCompleted: (value: string[]) => void; favorites: string[]; setFavorites: (value: string[]) => void }) {
-  const [selectedId, setSelectedId] = useState(procedures[0].id);
+  const requestedId = new URLSearchParams(window.location.search).get('procedure');
+  const [selectedId, setSelectedId] = useState(requestedId && procedures.some((procedure) => procedure.id === requestedId) ? requestedId : procedures[0].id);
   const selected = procedures.find((procedure) => procedure.id === selectedId) ?? procedures[0];
   const Icon = selected.icon;
   const isDone = completed.includes(selected.id);
   const toggleDone = () => setCompleted(isDone ? completed.filter((id) => id !== selected.id) : [...completed, selected.id]);
-  return <div className="mx-auto max-w-[1400px] px-5 py-8 sm:px-8 lg:px-12 lg:py-12"><PageHeader kicker="Aprender fazendo" title="Cuidado seguro começa no preparo." description="Escolha um procedimento para transformar orientação ergonômica em uma decisão possível no seu próximo cuidado." /><div className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_390px]"><div className="grid gap-3 sm:grid-cols-2">{procedures.map((procedure, index) => { const ProcedureIcon = procedure.icon; const active = selected.id === procedure.id; return <button type="button" key={procedure.id} onClick={() => setSelectedId(procedure.id)} data-testid={`button-select-procedure-${procedure.id}`} className={`animate-rise delay-${Math.min(index + 1, 4)} group relative flex min-h-[142px] flex-col items-start rounded-[22px] border p-5 text-left transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[var(--shadow-sm)] ${active ? 'border-[hsl(var(--primary))] bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-md)]' : 'border-[hsl(var(--border))] bg-[hsl(var(--card))]'}`}><div className="flex w-full items-center justify-between"><div className={`rounded-xl p-2.5 ${active ? 'bg-[hsl(var(--primary-foreground)/.14)]' : 'bg-[hsl(var(--muted))] text-[hsl(var(--primary))]'}`}><ProcedureIcon size={20} /></div>{completed.includes(procedure.id) ? <CheckCircle2 size={18} /> : <span className={`text-xs font-bold ${active ? 'text-[hsl(var(--secondary))]' : 'text-[hsl(var(--muted-foreground))]'}`}>{procedure.time}</span>}</div><div className="mt-auto pt-4"><div className="text-[15px] font-bold leading-snug">{procedure.title}</div><div className={`mt-1 text-xs ${active ? 'text-[hsl(var(--primary-foreground)/.7)]' : 'text-[hsl(var(--muted-foreground))]'}`}>{procedure.eyebrow}</div></div></button>; })}</div><aside className="h-fit rounded-[26px] border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-6 shadow-[var(--shadow-md)] xl:sticky xl:top-8"><div className="flex items-start justify-between"><div className="rounded-2xl bg-[hsl(var(--muted))] p-3 text-[hsl(var(--primary))]"><Icon size={23} /></div><button type="button" onClick={() => setFavorites(favorites.includes(selected.id) ? favorites.filter((id) => id !== selected.id) : [...favorites, selected.id])} aria-label="Salvar procedimento" data-testid="button-save-selected-procedure" className={`rounded-xl p-2 ${favorites.includes(selected.id) ? 'text-[hsl(var(--accent))]' : 'text-[hsl(var(--muted-foreground))]'}`}><Star size={19} fill={favorites.includes(selected.id) ? 'currentColor' : 'none'} /></button></div><div className="mt-6 text-xs font-bold uppercase tracking-[.16em] text-[hsl(var(--accent))]">{selected.eyebrow}</div><h2 className="mt-2 font-serif text-3xl font-bold leading-tight tracking-[-.03em]">{selected.title}</h2><p className="mt-3 text-sm leading-6 text-[hsl(var(--muted-foreground))]">{selected.description}</p><div className="my-6 h-px bg-[hsl(var(--border))]" /><div className="space-y-4">{selected.steps.map((step, index) => <div key={step} className="flex gap-3 text-sm leading-5"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[hsl(var(--secondary))] text-xs font-bold text-[hsl(var(--foreground))]">{index + 1}</span><span>{step}</span></div>)}</div><button type="button" onClick={toggleDone} data-testid="button-complete-procedure" className={`mt-7 flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-3.5 text-sm font-bold transition-colors ${isDone ? 'bg-[hsl(var(--muted))] text-[hsl(var(--primary))]' : 'bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))]'}`}>{isDone ? <><Check size={17} /> Revisar concluído</> : <><CheckCircle2 size={17} /> Marcar como visto</>}</button></aside></div><div className="mt-12 rounded-[24px] border border-[hsl(var(--border))] bg-[hsl(var(--muted)/.45)] p-6 sm:p-8"><div className="flex items-start gap-4"><div className="rounded-2xl bg-[hsl(var(--card))] p-3 text-[hsl(var(--primary))]"><Info size={20} /></div><div><h3 className="font-serif text-xl font-bold">Onde o corpo costuma sofrer</h3><p className="mt-2 max-w-3xl text-sm leading-6 text-[hsl(var(--muted-foreground))]">Pescoço, ombros, lombar, punhos e pernas podem sinalizar sobrecarga. Dor persistente, formigamento, perda de força ou limitação de movimento merecem atenção e avaliação profissional.</p><Link href="/body" data-testid="link-learn-body-check" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-[hsl(var(--primary))]">Observar meu corpo <ArrowRight size={15} /></Link></div></div></div></div>;
+   return <div className="mx-auto max-w-[1400px] px-5 py-8 sm:px-8 lg:px-12 lg:py-12"><PageHeader kicker="Aprender fazendo" title="Cuidado seguro começa no preparo." description="Escolha um procedimento para transformar orientação ergonômica em uma decisão possível no seu próximo cuidado. O conteúdo abaixo reúne contexto, riscos e recomendações do guia." /><div className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_460px]"><div className="grid gap-3 sm:grid-cols-2">{procedures.map((procedure, index) => { const ProcedureIcon = procedure.icon; const active = selected.id === procedure.id; return <button type="button" key={procedure.id} onClick={() => setSelectedId(procedure.id)} data-testid={`button-select-procedure-${procedure.id}`} className={`animate-rise delay-${Math.min(index + 1, 4)} group relative flex min-h-[142px] flex-col items-start rounded-[22px] border p-5 text-left transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[var(--shadow-sm)] ${active ? 'border-[hsl(var(--primary))] bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-md)]' : 'border-[hsl(var(--border))] bg-[hsl(var(--card))]'}`}><div className="flex w-full items-center justify-between"><div className={`rounded-xl p-2.5 ${active ? 'bg-[hsl(var(--primary-foreground)/.14)]' : 'bg-[hsl(var(--muted))] text-[hsl(var(--primary))]'}`}><ProcedureIcon size={20} /></div>{completed.includes(procedure.id) ? <CheckCircle2 size={18} /> : <span className={`text-xs font-bold ${active ? 'text-[hsl(var(--secondary))]' : 'text-[hsl(var(--muted-foreground))]'}`}>{procedure.time}</span>}</div><div className="mt-auto pt-4"><div className="text-[15px] font-bold leading-snug">{procedure.title}</div><div className={`mt-1 text-xs ${active ? 'text-[hsl(var(--primary-foreground)/.7)]' : 'text-[hsl(var(--muted-foreground))]'}`}>{procedure.eyebrow}</div></div></button>; })}</div><aside className="h-fit overflow-hidden rounded-[26px] border border-[hsl(var(--border))] bg-[hsl(var(--card))] shadow-[var(--shadow-md)] xl:sticky xl:top-8"><img src={selected.image} alt={selected.imageAlt} className="h-52 w-full object-cover" /><div className="p-6"><div className="flex items-start justify-between"><div className="rounded-2xl bg-[hsl(var(--muted))] p-3 text-[hsl(var(--primary))]"><Icon size={23} /></div><button type="button" onClick={() => setFavorites(favorites.includes(selected.id) ? favorites.filter((id) => id !== selected.id) : [...favorites, selected.id])} aria-label="Salvar procedimento" data-testid="button-save-selected-procedure" className={`rounded-xl p-2 ${favorites.includes(selected.id) ? 'text-[hsl(var(--accent))]' : 'text-[hsl(var(--muted-foreground))]'}`}><Star size={19} fill={favorites.includes(selected.id) ? 'currentColor' : 'none'} /></button></div><div className="mt-6 text-xs font-bold uppercase tracking-[.16em] text-[hsl(var(--accent))]">{selected.eyebrow}</div><h2 className="mt-2 font-serif text-3xl font-bold leading-tight tracking-[-.03em]">{selected.title}</h2><p className="mt-3 text-sm leading-6 text-[hsl(var(--muted-foreground))]">{selected.description}</p><p className="mt-4 text-sm leading-6 text-[hsl(var(--foreground)/.82)]">{selected.context}</p><div className="mt-5 rounded-2xl bg-[hsl(var(--secondary)/.34)] p-4"><div className="text-xs font-bold uppercase tracking-[.14em] text-[hsl(var(--accent))]">principais riscos</div><p className="mt-2 text-sm leading-6">{selected.risks}</p></div><div className="my-6 h-px bg-[hsl(var(--border))]" /><div className="text-xs font-bold uppercase tracking-[.14em] text-[hsl(var(--primary))]">como aplicar</div><div className="mt-4 space-y-4">{selected.steps.map((step, index) => <div key={step} className="flex gap-3 text-sm leading-5"><span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[hsl(var(--secondary))] text-xs font-bold text-[hsl(var(--foreground))]">{index + 1}</span><span>{step}</span></div>)}</div><div className="mt-6 flex flex-wrap gap-2">{selected.tags.map((tag) => <span key={tag} className="rounded-full bg-[hsl(var(--muted))] px-3 py-1.5 text-xs font-semibold text-[hsl(var(--muted-foreground))]">#{tag}</span>)}</div><button type="button" onClick={toggleDone} data-testid="button-complete-procedure" className={`mt-7 flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-3.5 text-sm font-bold transition-colors ${isDone ? 'bg-[hsl(var(--muted))] text-[hsl(var(--primary))]' : 'bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))]'}`}>{isDone ? <><Check size={17} /> Revisar concluído</> : <><CheckCircle2 size={17} /> Marcar como visto</>}</button></div></aside></div><div className="mt-12 rounded-[24px] border border-[hsl(var(--border))] bg-[hsl(var(--muted)/.45)] p-6 sm:p-8"><div className="flex items-start gap-4"><div className="rounded-2xl bg-[hsl(var(--card))] p-3 text-[hsl(var(--primary))]"><Info size={20} /></div><div><h3 className="font-serif text-xl font-bold">Onde o corpo costuma sofrer</h3><p className="mt-2 max-w-3xl text-sm leading-6 text-[hsl(var(--muted-foreground))]">Pescoço, ombros, lombar, punhos e pernas podem sinalizar sobrecarga. Dor persistente, formigamento, perda de força ou limitação de movimento merecem atenção e avaliação profissional. O mapa corporal do guia ajuda a relacionar esses sinais aos procedimentos da rotina.</p><Link href="/body" data-testid="link-learn-body-check" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-[hsl(var(--primary))]">Observar meu corpo <ArrowRight size={15} /></Link></div></div></div></div>;
 }
 
 function QuickProtocol() {
