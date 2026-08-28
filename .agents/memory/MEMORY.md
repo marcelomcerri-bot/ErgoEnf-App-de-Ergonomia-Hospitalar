@@ -1,0 +1,1 @@
+- [ErgoEnf product direction](ergoenf-product-direction.md) — prioritize decisions before movement over course-like progress or wellness language.
